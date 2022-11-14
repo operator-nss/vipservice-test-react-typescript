@@ -56,7 +56,7 @@ const AviaInfoLabel: FC<IAviaInfoLabel> = ({serverData, back = false}) => {
           {serverData.flightTimeFrom.map((time: FlightType, i: number) => (
             <button onClick={() => setSelectedTime(i)}
                     className={clsx('description__button', {active: selectedTime === i})}
-                    key={i}>{getTime(time?.from)} - {getTime(time?.to)}</button>
+                    key={i}>{getTime(time?.from)} - <span>{getTime(time?.to)}</span></button>
           ))}
 				</div>}
 

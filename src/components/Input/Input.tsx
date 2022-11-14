@@ -25,10 +25,10 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
   const [value, setValue] = useState('');
 
 
-  const onDatepickerInput = (e: string) => {
+  const onDatepickerInput = (e:string) => {
     setFocus(false)
     setSelectedDatepicker(true)
-    onChangeInput(e)
+    onChangeInput(String(e))
     setStartDate(e)
   }
 
