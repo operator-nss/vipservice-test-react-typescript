@@ -20,6 +20,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 @import "null";
 
+body { padding: 0 calc(20px - (100vw - 100%)) 0 0; }
 
 .container {
   max-width: 1010px;

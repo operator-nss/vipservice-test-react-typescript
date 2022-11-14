@@ -4,9 +4,7 @@ import Form from "../../components/Form/Form";
 
 const Home: FC = () => {
     return (
-        <div className='container'>
             <Form />
-        </div>
     );
 };
 
