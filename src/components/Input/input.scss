@@ -1,0 +1,30 @@
+.input {
+  font-weight: 700;
+  padding: 0px 12px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: 1px solid #fff;
+  color: #5C5C5C;
+  min-width: 208px;
+
+  &::placeholder {
+    color: #B7BAC1;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__label {
+    position: absolute;
+    font-size: 11px;
+    color: #FFFFFF;
+    top: -13px;
+    left: 0;
+    text-transform: capitalize;
+  }
+}
