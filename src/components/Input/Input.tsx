@@ -51,7 +51,7 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChange, name, l
 					dateFormat='dd.MM.yyyy'
 					placeholderText='дд.мм.гг'
 					selected={startDate}
-					onChange={(e: React.FormEvent<HTMLInputElement>) => onDatepickerInput(e)}
+					onChange={(e:  any) => onDatepickerInput(e)}
 				/>}
 
       {!datePicker && <input
