@@ -2,7 +2,9 @@
   font-weight: 700;
   outline: none;
   color: #5C5C5C;
-
+  background-color: #fff !important;
+  appearance: none;
+  background-image: none !important;
   &::placeholder {
     color: #B7BAC1;
   }
@@ -18,6 +20,7 @@
     width: 208px;
     display: flex;
     align-items: center;
+
     svg {
       flex-shrink: 0;
     }
@@ -25,6 +28,7 @@
 
   &__container--focused {
     border-color: #B7BAC1;
+
     label {
       color: #B7BAC1;
     }

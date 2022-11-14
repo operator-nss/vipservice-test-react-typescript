@@ -1,0 +1,22 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "useTabs": true,
+  "semi": false,
+  "singleQuote": true,
+  "importOrder": [
+      "<THIRD_PARTY_MODULES>",
+      "^@/components/(.*)$",
+      "^@/pages/(.*)$",
+      "^@/redux/(.*)$",
+      "^@/assets/(.*)$",
+      "^@/hooks/(.*)$",
+      "^@/helpers/(.*)$",
+      "^@/scss/(.*)$",
+      "^../(.*)",
+      "^./(.*)",
+      "(.scss)$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

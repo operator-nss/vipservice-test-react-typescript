@@ -1,15 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit'
+import {configureStore} from '@reduxjs/toolkit'
 import {useDispatch} from "react-redux";
-import aviaInfo from './slices/aviaInfoSlice'
+import avia from './slices/aviaInfoSlice'
 
-export const store: any = configureStore({
-    reducer: {
-        aviaInfo
-    },
+export const store = configureStore({
+  reducer: {
+    avia
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>;
 
-type AppDispatch = typeof store.dispatch;
 
-export const useAppDispatch = () => useDispatch<AppDispatch>();
+export type AppDispatch = typeof store.dispatch;

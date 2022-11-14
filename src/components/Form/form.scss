@@ -24,27 +24,3 @@
   }
 }
 
-.button {
-  color: #FFFFFF;
-  padding: 10px 20px;
-  background-color: #5C87DB;
-  border-radius: 0.7em;
-  transition: background-color 0.3s ease 0s;
-  @media (any-hover: hover) {
-    &:hover {
-      background-color: #3E67B7;
-    }
-  }
-
-  &:active {
-    background-color: #5C87DB;
-    box-shadow: 0px 4px 4px rgba(92, 135, 219, 0.15);
-  }
-
-  &:disabled {
-    background-color: #B7BAC1;
-    touch-action: none;
-    user-select: none;
-    cursor: inherit;
-  }
-}

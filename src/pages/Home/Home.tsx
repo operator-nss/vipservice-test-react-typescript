@@ -3,9 +3,9 @@ import './home.scss'
 import Form from "../../components/Form/Form";
 
 const Home: FC = () => {
-    return (
-            <Form />
-    );
+  return (
+    <Form/>
+  );
 };
 
 export default Home;
