@@ -5,6 +5,7 @@
   background-color: #fff !important;
   appearance: none;
   background-image: none !important;
+
   &::placeholder {
     color: #B7BAC1;
   }
@@ -70,4 +71,9 @@
       color: #B7BAC1;
     }
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
 }
