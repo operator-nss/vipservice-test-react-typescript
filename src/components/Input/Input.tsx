@@ -33,9 +33,9 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
   }
 
   const onInput = () => {
+    setFocus(false)
     if (value.length) {
       onChangeInput(value)
-      setFocus(false)
     }
 
   }
