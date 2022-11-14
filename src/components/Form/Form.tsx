@@ -44,25 +44,26 @@ const Form = () => {
     <form onSubmit={handleSubmit} action="" className="form">
       <div className="form__label">
         <Input
-          onChange={fromInput}
+          onChangeInput={fromInput}
           label='откуда'
           placeholder='Город вылета'
           name='from-city'
         />
         <Input
-          onChange={toInput}
+          onChangeInput={toInput}
           label='куда'
           placeholder='Город прилёта'
           name='from-city'
         />
         <Input
-          onChange={fromDateInput}
-          datePicker label='туда'
+          onChangeInput={fromDateInput}
+          datePicker
+          label='туда'
           placeholder='дд.мм.гг'
           name='from-city'
         />
         <Input
-          onChange={toDateInput}
+          onChangeInput={toDateInput}
           datePicker
           label='обратно'
           placeholder='дд.мм.гг'

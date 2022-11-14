@@ -13,10 +13,10 @@ interface IInput {
   label: string
   placeholder: string
   datePicker?: boolean
-  onChange: (e: string | React.FormEvent<HTMLFormElement>) => void
+  onChangeInput: (e: string) => void
 }
 
-const Input: FC<IInput> = ({type = 'text', datePicker = false, onChange, name, label, placeholder, classes}) => {
+const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, name, label, placeholder, classes}) => {
 
 
   const [startDate, setStartDate] = useState('');
@@ -28,13 +28,13 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChange, name, l
   const onDatepickerInput = (e: string) => {
     setFocus(false)
     setSelectedDatepicker(true)
-    onChange(e)
+    onChangeInput(e)
     setStartDate(e)
   }
 
   const onInput = () => {
     if (value.length) {
-      onChange(value)
+      onChangeInput(value)
       setFocus(false)
     }
 
@@ -51,7 +51,7 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChange, name, l
 					dateFormat='dd.MM.yyyy'
 					placeholderText='дд.мм.гг'
 					selected={startDate}
-					onChange={(e:  any) => onDatepickerInput(e)}
+					onChange={(e: any) => onDatepickerInput(e)}
 				/>}
 
       {!datePicker && <input
