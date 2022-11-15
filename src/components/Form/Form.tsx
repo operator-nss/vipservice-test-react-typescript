@@ -41,7 +41,7 @@ const Form = () => {
 
 
   return (
-    <form onSubmit={handleSubmit} action="" className="form">
+    <form noValidate autoComplete="off" onSubmit={handleSubmit} action="" className="form">
       <div className="form__label">
         <Input
           onChangeInput={fromInput}
