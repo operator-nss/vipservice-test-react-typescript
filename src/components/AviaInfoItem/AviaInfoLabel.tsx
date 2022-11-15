@@ -34,8 +34,8 @@ const AviaInfoLabel: FC<IAviaInfoLabel> = ({serverData, back = false}) => {
             </div>
             <div className="description__row">
               <div className="description__airports">
-                <div className="description__airport">{serverData.airportFrom}</div>
-                <div className="description__airport">{serverData.airportTo}</div>
+                <div className="description__airport">{back ? serverData.airportTo : serverData.airportFrom}</div>
+                <div className="description__airport">{back ? serverData.airportFrom : serverData.airportTo}</div>
               </div>
               <div className="description__line"/>
               <div className="description__flight-time">В
