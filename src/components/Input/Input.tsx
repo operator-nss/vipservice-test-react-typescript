@@ -75,6 +75,16 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
       }, 350),
       []);
 
+    const renderCities = () => {
+      let coincidence =cities?.filter(city =>
+        city.name?.toLowerCase().includes(searchValue?.toLowerCase()))
+      return coincidence?.length > 0 && <ul className={clsx('input__list', {'open': openCities})}>
+        {coincidence?.map((city, i) =>
+          <li onClick={() => setCity(city?.name)} key={i}>{city.name}</li>
+        )}
+      </ul>
+    }
+
     return (
       <div className={clsx('input__container', {'input__container--selected': selectedDatepicker},
         {'input__container--focused': focus})}>
@@ -102,13 +112,7 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
 					className={`input ${classes}`}
 				/>}
         <label className='input__label' htmlFor={name}>{label}</label>
-        {!datePicker && <ul className={clsx('input__list', {'open': openCities})}>{cities?.filter(city =>
-          city.name?.toLowerCase().includes(searchValue?.toLowerCase())).map((city, i) =>
-          (
-            <li onClick={() => setCity(city?.name)} key={i}>{city.name}</li>
-          )
-        )}</ul>}
-
+        {!datePicker && renderCities()}
       </div>
     );
   }
