@@ -62,6 +62,7 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
 
     const setCity = (city: string) => {
       setValue(city);
+      onChangeInput(city)
       setTimeout(() => {
         setOpenCities(false)
         setFocus(false)
@@ -76,13 +77,13 @@ const Input: FC<IInput> = ({type = 'text', datePicker = false, onChangeInput, na
       []);
 
     const renderCities = () => {
-      let coincidence =cities?.filter(city =>
+      let coincidence = cities?.filter(city =>
         city.name?.toLowerCase().includes(searchValue?.toLowerCase()))
       return coincidence?.length > 0 && <ul className={clsx('input__list', {'open': openCities})}>
         {coincidence?.map((city, i) =>
           <li onClick={() => setCity(city?.name)} key={i}>{city.name}</li>
         )}
-      </ul>
+			</ul>
     }
 
     return (
