@@ -26,11 +26,11 @@ const AviaInfoLabel: FC<IAviaInfoLabel> = ({serverData, back = false}) => {
       </div>
       <div className="description">
         <div className="description__body">
-          <div className={clsx("description__main-info", {'description__main-info--reverse':back})}>
+          <div className="description__main-info">
             <div className='description__from'>
               <div className="description__time"> {getTime(serverData.flightTimeFrom[selectedTime].from)}</div>
-              <div className="description__city">{from}</div>
-              <div className="description__date">{getDay(dateFrom)}</div>
+              <div className="description__city">{back ? to : from}</div>
+              <div className="description__date">{getDay(back ? dateTo : dateFrom)}</div>
             </div>
             <div className="description__row">
               <div className="description__airports">
@@ -43,8 +43,8 @@ const AviaInfoLabel: FC<IAviaInfoLabel> = ({serverData, back = false}) => {
             </div>
             <div className="description__to">
               <div className="description__time">{getTime(serverData.flightTimeFrom[selectedTime].to)}</div>
-              <div className="description__city">{to}</div>
-              <div className="description__date">{getDay(dateTo)}</div>
+              <div className="description__city">{back ? from : to}</div>
+              <div className="description__date">{getDay(back ? dateTo : dateFrom)}</div>
             </div>
           </div>
 
