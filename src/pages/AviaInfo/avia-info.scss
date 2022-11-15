@@ -9,7 +9,7 @@
     background: #FFFFFF;
     box-shadow: 0 0 14px rgba(112, 121, 153, 0.3);
     border-radius: 15px;
-    @media (max-width: 991.98px) {
+    @media (max-width: 899.98px) {
       flex-direction: column;
     }
   }
@@ -88,7 +88,7 @@
     justify-content: center;
     align-items: center;
     border-left: 1px solid #DDE3EE;
-    padding: 0 29px 0 48px;
+    padding: 0 29px 0 29px;
     min-height: 100%;
     @media (max-width: 991.98px) {
       border-top: 1px solid #DDE3EE;
@@ -123,6 +123,7 @@
     gap: 20px;
     @media (max-width: 479.98px) {
       flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
       text-align: center;
     }
@@ -131,6 +132,30 @@
 
   // .description__from
   &__from {
+    width: 100px;
+    flex-shrink: 0;
+  }
+
+  // .description__row
+  &__row {
+    flex: 0 0 300px;
+    max-width: 300px;
+    @media (max-width: 992.98px) {
+      flex: 0 1 200px;
+      max-width: 200px;
+      width: 100%;
+    }
+    @media (max-width: 479.98px){
+       flex: 1 1 auto;
+    }
+  }
+
+  // .description__to
+  &__to {
+    @media (min-width: 991.98px){
+      margin-left: 20px;
+    }
+
   }
 
   // .description__flight-time
@@ -163,16 +188,6 @@
     line-height: 114%;
   }
 
-  // .description__row
-  &__row {
-    flex: 1 1 300px;
-    max-width: 300px;
-    @media (max-width: 767.98px) {
-      flex: 1 1 auto;
-      max-width: 100%;
-      width: 100%;
-    }
-  }
 
   // .description__airports
   &__airports {
@@ -190,10 +205,10 @@
     position: relative;
     width: 280px;
     margin: 8px auto 0;
-    @media (max-width: 767.98px) {
-      max-width: 280px;
+    @media (max-width: 991.98px) {
+      max-width: 200px;
       width: 100%;
-      min-width: 150px;
+      min-width: 100px;
     }
 
     &::after {
@@ -219,9 +234,6 @@
     }
   }
 
-  // .description__to
-  &__to {
-  }
 
   // .description__buttons
   &__buttons {
